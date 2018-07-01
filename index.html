@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Misterytour2018</title>
+     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+     <link name="description" content="ミステリーツアー2018">  
+     <link rel="stylesheet" href="css/reset.css">
+  </head>
+  
+  <body id="front">
+    <!--ここからheader-->
+    <header>
+      <div class="header-wrapper">
+      <div class="left-logo clearfix">
+        <h1 ><a href="file:///C:/Users/user/Desktop/%E3%83%9F%E3%82%B9%E3%83%84%E3%82%A2/misterytour.html">Misterytour2018</a></h1>
+      </div>
+      <div class="right-nav clearfix">
+        <nav>
+          <ul>
+            <li><a href="file:///C:/Users/user/Desktop/%E3%83%9F%E3%82%B9%E3%83%84%E3%82%A2/about.html">about</a></li>
+            <li>cars</li>
+            <li>pastmovie</li>
+          </ul>
+        </nav>
+      </div>
+      </div>
+    </header>
+
+    <!--ここまでheader -->
+    <main>
+    <div class="main-wrapper">
+      <div class="background">
+        <div class="main-content">
+          <h1 id="title">Misterytour2018</h1>
+            <div class="btn" id="btn-js">
+              <p><a href="file:///C:/Users/user/Desktop/%E3%83%9F%E3%82%B9%E3%83%84%E3%82%A2/about.html" >Go to drive!</a></p>
+            </div>
+        </div>
+       <div class="faq">
+        <ul id="faq-list">
+          <li class="faq-list-item">
+            <h3 class="question">ミスツアって楽しいの？</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>楽しいです。来ましょう。</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">お金がないです。ミスツアいけません。</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>お金は作るものです。来ましょう。</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">予定が空いてません。</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>ミスツアより大事な予定はありません。来ましょう。</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">気になる子がいます。一緒の車になりたいです。</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>要相談です。来ましょう。</p>
+            </div>
+          </li>
+        </ul>
+      </div> 
+      </div>  
+    </div>
+    </main>
+      
+    <footer>
+      <div class="footer-wrapper"> 
+        <p>(c)2018 55th RIKO.T.C Members </p>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script >
+      $(function(){
+        $('#title').hide();
+        $('#title').fadeIn(2000);
+        $('#btn-js').hide();
+        $('#btn-js').slideDown();
+         
+      $(".faq-list-item").click(
+      function(){
+        var $answer = $(this).find('.answer')
+        
+        if($answer.hasClass('open')){
+           $answer.removeClass('open');
+           $answer.slideUp();
+           $(this).find('span').text("+");
+        } else {
+           $answer.addClass('open');
+           $answer.slideDown();
+           $(this).find('span').text("-");
+           }
+        
+      });
+      
+      });
+      
+    </script>
+  </body>
+</html>
